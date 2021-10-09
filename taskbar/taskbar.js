@@ -3,7 +3,7 @@ let home = document.querySelector(".home");
 let backbtn = document.querySelector(".back");
 let x = window.matchMedia("(max-width: 560px)");
 const homepg = "file:///C:/%D8%AA%D8%AF%D8%B1%D8%A8%20%D8%B9%D9%84%D9%89%20%D8%B5%D9%86%D8%B9%20%D8%A7%D9%84%D9%85%D9%88%D8%A7%D9%82%D8%B9/%D8%AA%D8%B9%D9%84%D9%85%20%D8%AC%D8%A7%D9%81%D8%A7%20%D8%B3%D9%83%D8%B1%D8%A8%D8%AA/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9%20%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9%20%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9.html";
-
+console.log(location);
 
 function myFunction(x) {
     backbtn = document.querySelector(".back");
