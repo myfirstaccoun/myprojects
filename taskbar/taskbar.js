@@ -4,8 +4,6 @@ let backbtn = document.querySelector(".back");
 let x = window.matchMedia("(max-width: 560px)");
 const homepg = "https://myprojects513.netlify.app/";
 
-console.log(location);
-
 function myFunction(x) {
     backbtn = document.querySelector(".back");
 
@@ -22,6 +20,9 @@ function myFunction(x) {
     } else {
         backbtn.style.fontSize = "100%";
     }
+    
+    console.log(location);
+    
 }
 
 function homefx() {
