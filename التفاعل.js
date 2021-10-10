@@ -10,5 +10,5 @@ function left(str, chr) {
 
 function goto(id) {
     idresult = right(id,1);
-    location = `proj ${idresult}/مشروع.html`;
+    location = `المشروع ${idresult}/مشروع.html`;
 }
