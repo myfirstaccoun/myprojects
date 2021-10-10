@@ -24,7 +24,7 @@ function myFunction(x) {
 }
 
 function homefx() {
-    location = homepg;
+    location = "https://myprojects513.netlify.app/";
 }
 
 let page = -1;
