@@ -20,9 +20,6 @@ function myFunction(x) {
     } else {
         backbtn.style.fontSize = "100%";
     }
-    
-    console.log(location);
-    
 }
 
 function homefx() {
@@ -83,3 +80,5 @@ if (location.href != homepg) {
 }
 
 myFunction(x);
+
+console.log(location);
