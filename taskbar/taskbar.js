@@ -24,7 +24,7 @@ function myFunction(x) {
 }
 
 function homefx() {
-    location = "../الصفحة الرئيسية/الصفحة الرئيسية.html";
+    location = homepg;
 }
 
 let page = -1;
