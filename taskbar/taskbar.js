@@ -4,7 +4,6 @@ let backbtn = document.querySelector(".back");
 let x = window.matchMedia("(max-width: 560px)");
 const homepg = "https://myprojects513.netlify.app/";
 
-
 function myFunction(x) {
     backbtn = document.querySelector(".back");
 
@@ -16,6 +15,12 @@ function myFunction(x) {
             backbtn.innerText = "▶";
         } else {
             home.innerText = "العودة إلى الصفحة الرئيسية -->";
+            backbtn.innerText = "<-- العودة إلى الصفحة السابقة";
+        }
+    } else {
+        if (x.matches) {
+            backbtn.innerText = "▶";
+        } else {
             backbtn.innerText = "<-- العودة إلى الصفحة السابقة";
         }
     }
