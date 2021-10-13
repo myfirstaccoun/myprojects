@@ -124,4 +124,5 @@ reset.onclick = () => {
         item.innerText = "";
     });
     win = 0;
+    turn = "x".toUpperCase();
 }
