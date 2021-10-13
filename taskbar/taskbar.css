@@ -28,6 +28,10 @@
     right: 46%;
     margin-top: 0px;
     font-family: sans-serif;
+    color: Black;
+}
+
+.dark .name {
     color: white;
 }
 
