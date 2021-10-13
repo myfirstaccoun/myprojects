@@ -80,7 +80,7 @@ divbtns.onclick = (eo) => {
     } else if (eo.target.classList.contains("star")) {
         console.log(eo.target.parentNode.classList);
 
-        if (eo.target.src == "file:///C:/%D8%AA%D8%AF%D8%B1%D8%A8%20%D8%B9%D9%84%D9%89%20%D8%B5%D9%86%D8%B9%20%D8%A7%D9%84%D9%85%D9%88%D8%A7%D9%82%D8%B9/%D8%AA%D8%B9%D9%84%D9%85%20%D8%AC%D8%A7%D9%81%D8%A7%20%D8%B3%D9%83%D8%B1%D8%A8%D8%AA/%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%202/%D9%86%D8%AC%D9%85%D8%A9.png") {
+        if (eo.target.src == "https://myprojects513.netlify.app/%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%202/%D9%86%D8%AC%D9%85%D8%A9.png") {
                 eo.target.src = "نجمة بعد.png";
                 eo.target.parentNode.remove();
                 divbtns.innerHTML = `<div class="thebtn">
