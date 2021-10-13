@@ -36,7 +36,6 @@ function add() {
     btns = document.querySelectorAll(".divbtns .thebtn");
     let none = document.querySelectorAll(".none");
 
-    console.log(txt);
 
     if (btns.length >= 5) {
         divbtns.classList.add("divbtns-scroll");
@@ -78,8 +77,6 @@ divbtns.onclick = (eo) => {
         bodyon.style.backgroundColor = "rgb(255, 206, 206)";
 
     } else if (eo.target.classList.contains("star")) {
-        console.log(eo.target.parentNode.classList);
-
         if (eo.target.src == "https://myprojects513.netlify.app/%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%202/%D9%86%D8%AC%D9%85%D8%A9.png") {
                 eo.target.src = "نجمة بعد.png";
                 eo.target.parentNode.remove();
@@ -144,7 +141,6 @@ window.addEventListener("keydown" , (es) => {
         bodyon.style.backgroundColor = "rgb(0, 63, 163)";
         editinput.value = "";
     }
-    console.log(1);
 });
 
 editinput.onkeydown = (e) => {
