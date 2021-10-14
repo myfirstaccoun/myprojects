@@ -2,6 +2,25 @@
     display: block!important;
 }
 
+.const .task-bar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255 255 255);
+    box-shadow: 0 10px 10px white, 0 0 140px white, 0 0 180px white;
+}
+
+.const .name {
+    margin-top: 8px;
+}
+
+.const .bar {
+    position: absolute;
+    top: 13%;
+}
+
 .bar {
     position: fixed;
     padding: 10px;
