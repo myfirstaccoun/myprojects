@@ -63,7 +63,7 @@ function changetxtsize () {
 numbad.onclick = (eo) => {
     if (eo.target.classList.contains("nums")) {
         if (eo.target.innerText >= 0 && eo.target.innerText <= 9) {
-            if (inpt.innerText == 0) {
+            if (inpt.innerText == "0") {
                 inpt.innerText = eo.target.innerText;
             } else {
                 inpt.innerText += eo.target.innerText;
