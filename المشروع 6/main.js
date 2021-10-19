@@ -5,7 +5,7 @@ let count = 0;
 let op = document.querySelectorAll(".operators");
 let num1 = 0;
 let num2 = 0;
-let operator = "";
+let operator = "+";
 let result = 0;
 
 function right(str, chr) {
