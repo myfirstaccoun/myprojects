@@ -4,14 +4,24 @@
     transition: all 0.5s;
 }
 
+
+
+
+
+
+
+/* المتغيرات */
 :root {
     --w-and-h: 200px;
 }
+/* نهاية المتغيرات */
 
-.allinform {
-    display: none;
-}
 
+
+
+
+
+/* الكل */
 .keysform {
     margin-top: 10%;
     margin-right: auto;
@@ -25,15 +35,55 @@
     justify-content: center;
     align-items: center;
 }
-
+ 
 .keysform.margtop {
     margin-top: 0%;
     transition: all 0s;
 }
+/* نهاية الكل */
 
+
+
+
+
+
+
+
+
+/* إضغط على أي مفتاح */
+.any {
+    width: 100%;
+    text-align: center;
+}
+/* نهاية */
+
+
+
+
+
+
+
+
+
+/* الجميع ماعدا ادخل مفتاح */
+.allinform {
+    display: none;
+}
+/* نهاية */
+
+
+
+
+
+
+
+
+
+/* الدائرة */
 .circleofnum {
     position: relative;
-    right: 95px;
+    /* right: 95px; */
+    margin-right: auto;
     margin-left: auto;
     border-radius: 50%;
     border: 5px solid rgb(60, 255, 102);
@@ -48,60 +98,125 @@
     font-size: 500%;
     transition: all 0s;
 }
+/* نهاية الدائرة */
 
-.keysform .pressany {
-    position: relative;
-    right: 100px;
-}
 
-h3 {
-    display: inline;
-}
 
+
+
+
+
+
+
+
+
+
+
+/* المعلومات */
 .details {
-    margin-top: 70px;
-    font-size: 18px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.keynameh {
-    position: relative;
-    right: 120px;
+.Names , .Codes {
+    align-items: center;
+    justify-content: center;
+    grid-row: 1/2;
 }
 
-.keyName {
-    text-align: center;
-    position: relative;
-    top: 20px;
-    right: 150px;
-    width: 250px;
-    word-wrap: break-word;
-    font-size: 40px!important;
+.Names {
+    grid-column: 1/2;
 }
 
-.keyCode {
-    position: relative;
-    bottom: 45px;
-    width: 100px;
-    text-align: center;
+.Codes {
+    grid-column: 2/3;
+}
+
+.item {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .key {
-    font-size: 50px;
+    font-size: 40px;
 }
+/* نهاية المعلومات */
 
-.show {
-    height: 400px;
-}
 
+
+
+
+
+
+
+
+
+
+/* الشاشات */
 @media (max-width: 610px) {
 
     .keysform {
         width: 80%;
-        text-align: center;
     }
 
     .pressany {
         width: 100%;
         right: 0px!important;
     }
+
+    .keynameh {
+        right: 200px;
+    }
+
+    .keyName {
+        right: 230px;
+    }
 }
+
+@media (max-width: 580px) {
+    .keynameh {
+        right: 170px;
+    }
+
+    .keyName {
+        right: 200px;
+    }
+}
+
+@media (max-width: 530px) {
+    .keynameh {
+        right: 140px;
+    }
+
+    .keyName {
+        right: 170px;
+    }
+}
+
+@media (max-width: 485px) {
+    .keynameh {
+        right: 100px;
+    }
+
+    .keyName {
+        right: 140px;
+    }
+
+    /* .circleofnum {
+        right: 70px;
+    } */
+}
+
+@media (max-width: 450px) {
+    .keynameh {
+        right: 80px;
+    }
+
+    .keyName {
+        right: 110px;
+        font-size: 30px!important;
+    }
+}
+/* النهاية */
