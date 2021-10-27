@@ -98,6 +98,21 @@
     .name {
         font-size: 30px;
     }
+    
+    .home , .back {
+        font-size: 0px!important;
+        width: 30px;
+    }
+
+    .back::after {
+        content: "▶";
+        font-size: 12px;
+    }
+
+    .home::after {
+        content: "◀";
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 430px) {
