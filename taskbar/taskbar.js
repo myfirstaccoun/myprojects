@@ -9,20 +9,6 @@ function myFunction(x) {
 
     if (location != homepg) {
         home = document.querySelector(".home");
-
-        if (x.matches) {
-            home.innerText = "◀";
-            backbtn.innerText = "▶";
-        } else {
-            home.innerText = "العودة إلى الصفحة الرئيسية -->";
-            backbtn.innerText = "<-- العودة إلى الصفحة السابقة";
-        }
-    } else {
-        if (x.matches) {
-            backbtn.innerText = "▶";
-        } else {
-            backbtn.innerText = "<-- العودة إلى الصفحة السابقة";
-        }
     }
 }
 
