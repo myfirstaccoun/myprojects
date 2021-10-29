@@ -146,11 +146,11 @@ background-color: rgba(161, 161, 161, 0.329);
 }
 
 .none {
-    position: absolute;
-    right: 25%;
-    top: 7%;
     font-size: 100px;
+    margin-right: auto;
     color: rgba(117, 117, 117, 0.5);
+    margin-left: auto;
+    width: fit-content;
 }
 
 .delsure , dialog {
