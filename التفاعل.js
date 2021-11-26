@@ -9,6 +9,6 @@ function left(str, chr) {
 }
 
 function goto(id) {
-    idresult = left(id,id.split("").length - 1);
+    idresult = right(id,id.split("").length - 1);
     location = `../المشروع ${idresult}/مشروع.html`;
 }
