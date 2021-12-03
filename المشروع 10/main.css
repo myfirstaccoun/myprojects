@@ -217,3 +217,16 @@ h1 {
 				width: 100%;
 				text-align: center;
 }
+
+@media (min-width: 500px) {
+    .cont input {
+        font-size: 150%;
+    }
+}
+
+@media (min-width: 780px) {
+    .cont input {
+        right: 5%;
+        width: 90%;
+    }
+}
