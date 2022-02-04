@@ -15,6 +15,31 @@ let editinput = document.querySelector(".editpagediv input");
 let editval = editinput.value;
 let edittarg;
 
+function saveData(){
+    setTimeout(() => {
+
+        let dataObjArr = [];
+
+        for(let i = 0; i < divbtns.getElementsByTagName("p").length; i++) {
+            let btnVal = {
+                name: divbtns.getElementsByTagName("p")[i].innerText,
+                star: divbtns.getElementsByTagName("img")[(2*(i+1)) + i].src,
+            };
+    
+            dataObjArr.push(btnVal);
+        }
+
+        localStorage.setItem("data", JSON.stringify(dataObjArr));
+        console.log(dataObjArr);
+
+    },500);
+}
+
+
+/*  تعديل ال
+    margin
+    والغاؤه من اخر زرار
+*/
 function lenfx(num = 1) {
     len = (document.querySelectorAll(".divbtns .thebtn").length) - 1;
     btns = document.querySelectorAll(".divbtns .thebtn");
@@ -31,11 +56,9 @@ function lenfx(num = 1) {
 
 }
 
-
 function add() {
     btns = document.querySelectorAll(".divbtns .thebtn");
     let none = document.querySelectorAll(".none");
-
 
     if (btns.length >= 5) {
         divbtns.classList.add("divbtns-scroll");
@@ -60,7 +83,7 @@ function add() {
         <img src="نجمة.png" class="star">
         </div>`;
         txt.value = "";
-
+        saveData();
     }
 }
 
@@ -75,8 +98,8 @@ divbtns.onclick = (eo) => {
         delsurediv.style.display = "block";
         editdiv.style.display = "none";
         bodyon.style.backgroundColor = "rgb(255, 206, 206)";
-
     } else if (eo.target.classList.contains("star")) {
+
         if (eo.target.src == "https://myprojects513.netlify.app/%D8%A7%D9%84%D9%85%D8%B4%D8%B1%D9%88%D8%B9%202/%D9%86%D8%AC%D9%85%D8%A9.png") {
                 eo.target.src = "نجمة بعد.png";
                 eo.target.parentNode.remove();
@@ -88,6 +111,7 @@ divbtns.onclick = (eo) => {
         } else {
             eo.target.src = "نجمة.png";
         }
+        saveData();
     } else if (eo.target.classList.contains("edit")) {
         
         edittarg = eo.target.parentNode;
@@ -105,6 +129,8 @@ delsure.onclick = (eo) => {
         delnum.remove();
 
         btns = document.querySelectorAll(".divbtns .thebtn");
+
+        saveData();
 
         if (btns.length <= 5 && btns.length != 0) {
             divbtns.classList.remove("divbtns-scroll");
@@ -131,6 +157,39 @@ delsure.onclick = (eo) => {
             edittarg.querySelector("p").innerText = editval;
             delsure.style.display= "none";
             bodyon.style.backgroundColor = "rgb(0, 63, 163)";
+            saveData();
+        }
+    }
+}
+
+window.onload = () => {
+
+    if(JSON.parse(localStorage.data).length != 0) {
+        let myData = JSON.parse(localStorage.data);
+        let myNum = 0;
+        for (let i = 0; i < JSON.parse(localStorage.data).length-1; i++) {
+            divbtns.innerHTML = `${divbtns.innerHTML} <div class="thebtn">
+        <p>${myData[i].name}</p>
+        <img src="إلغاء.png" class="delete">
+        <img src="تعديل.png" class="edit">
+        <img src="${myData[i].star}" class="star">
+        </div>`;
+            myNum = i + 1;
+        }
+
+        divbtns.innerHTML = `${divbtns.innerHTML} <div class="thebtn margin-none">
+        <p>${myData[myNum].name}</p>
+        <img src="إلغاء.png" class="delete">
+        <img src="تعديل.png" class="edit">
+        <img src="${myData[myNum].star}" class="star">
+        </div>`;
+
+    }else {
+        if (btns.length == 0) {
+            const non = document.createElement("h1");
+            non.innerText = "إيه يا معلم";
+            non.classList.add("none");
+            divbtns.append(non);
         }
     }
 }
@@ -152,6 +211,7 @@ editinput.onkeydown = (e) => {
             edittarg.querySelector("p").innerText = editval;
             delsure.style.display= "none";
             bodyon.style.backgroundColor = "rgb(0, 63, 163)";
+            saveData();
         }
         editinput.blur();
     }
