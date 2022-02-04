@@ -25,11 +25,11 @@ function saveData(){
                 name: divbtns.getElementsByTagName("p")[i].innerText,
                 star: divbtns.getElementsByTagName("img")[(2*(i+1)) + i].src,
             };
+            
+            dataObjArr.push(btnVal);
         }
 
         localStorage.setItem("data", JSON.stringify(dataObjArr));
-        console.log(dataObjArr);
-
     },500);
 }
 
