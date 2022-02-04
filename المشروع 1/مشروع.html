@@ -16,36 +16,3 @@
     <div start></div>
 </body>
 </html>
-
-function tableSearch() {
-            let input, filter, table, tr, td, txtValue, ifnum = 0;
-
-            //Intialising Variables
-            input = document.getElementById("myInput");
-            filter = input.value.toLowerCase();
-            table = document.getElementById("myTable");
-            tr = table.getElementsByTagName("tr");
-
-console.log(tr);
-												
-            for (let i = 0; i < tr.length; i++) {
-            ifnum = 0;
-            for (let l = 0; l<3;l++) {
-            console.log(l);
-                td = tr[i].getElementsByTagName("td")[l];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if(ifnum == 0) {
-                    if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                        ifnum = 1;
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                    }
-                }
-                }
-                
-            }
-
-        }
