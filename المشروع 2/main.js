@@ -164,7 +164,9 @@ delsure.onclick = (eo) => {
 
 window.onload = () => {
 
-    if(JSON.parse(localStorage.data).length != 0) {
+    localStorage.getItem("data") == "[]" ? localStorage.clear() : "";
+
+    if(localStorage.length > 0) {
         let myData = JSON.parse(localStorage.data);
         let myNum = 0;
         for (let i = 0; i < JSON.parse(localStorage.data).length-1; i++) {
