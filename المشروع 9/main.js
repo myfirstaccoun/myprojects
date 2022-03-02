@@ -12,5 +12,5 @@ setInterval(() => {
 
     hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
     mn.style.transform = `rotateZ(${mm}deg)`;
-    sc.style.transform = `rotateZ(${ss + (ms/1000)}deg)`;
+    sc.style.transform = `rotateZ(${ss + (ms/500)}deg)`;
 });
