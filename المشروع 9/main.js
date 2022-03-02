@@ -14,5 +14,5 @@ setInterval(() => {
     mn.style.transform = `rotateZ(${mm}deg)`;
     sc.style.transform = `rotateZ(${ss}deg)`;
 
-    document.write(ms);
+    document.write(ms + "<br>");
 });
