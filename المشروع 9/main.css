@@ -6,14 +6,19 @@
     --w-and-h: 370px;
     --dark-color: #091921;
     --marg-top: 150px;
+    --sec-color: rgb(211, 255, 140);
+    --min-color: #fff;
+    --hour-color: #ff105e;
 }
 
 body {
     display: flex;
     background: var(--dark-color);
+    height: 600px;
 }
 
 .bodyclock {
+    position: relative;
     margin-top: var(--marg-top);
     justify-content: center;
     align-items: center;
@@ -82,7 +87,7 @@ body {
     position: relative;
     width: 8px;
     height: 80px;
-    background: #ff105e;
+    background: var(--hour-color);
     z-index: 10;
     border-radius: 6px 6px 0 0;
 }
@@ -93,7 +98,7 @@ body {
     bottom: 15px;
     width: 4px;
     height: 140px;
-    background: #fff;
+    background: var(--min-color);
     z-index: 11;
     border-radius: 6px 6px 0 0;
 }
@@ -104,9 +109,36 @@ body {
     bottom: 45px;
     width: 2px;
     height: 150px;
-    background: rgb(211, 255, 140);
+    background: var(--sec-color);
     z-index: 12;
     border-radius: 6px 6px 0 0;
+}
+
+.clock-btn {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.btn-sec {
+    bottom: -30px;
+    background-color: var(--sec-color);
+}
+
+.btn-min {
+    bottom: -60px;
+    background-color: var(--min-color);
+}
+
+.btn-hour {
+    bottom: -90px;
+    background-color: var(--hour-color);
 }
 
 @media (max-width: 385px) {
