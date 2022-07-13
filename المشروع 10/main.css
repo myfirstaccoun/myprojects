@@ -1,5 +1,5 @@
 body {
-    height: 1000px;
+    height: 100vh;
     margin: 0;
     padding: 0;
     background-image: linear-gradient(-90deg, rgb(130, 230, 255), rgb(255, 175, 212));
@@ -17,8 +17,8 @@ body {
 
 #InputToShare, #ShareBtn {
     position: absolute;
-    right: calc(50% - 175px);
-    width: 350px;
+    right: calc(50% - 300px);
+    width: 600px;
     border-radius: 10px;
     border: 1px solid rgb(112, 112, 112);
     text-align: center;
